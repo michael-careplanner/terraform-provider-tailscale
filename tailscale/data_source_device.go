@@ -18,6 +18,16 @@ func dataSourceDevice() *schema.Resource {
 				Required:    true,
 				Description: "The name of the device",
 			},
+			"user": {
+				Type:        schema.TypeString,
+				Required:    true,
+				Description: "The user associated with the device",
+			},
+			"id": {
+				Type:        schema.TypeString,
+				Description: "The unique identifier of the device",
+				Computed:    true,
+			},
 			"addresses": {
 				Type:        schema.TypeList,
 				Description: "The list of device's IPs",
